@@ -1,30 +1,73 @@
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
+<!-- App.vue -->
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app">
+    <Logo />
+    <Questions @answersSubmitted="receiveAnswers" />
+    <Results />
+    <!-- <Results v-if="questionsSubmitted" :answers="recordedAnswers" /> -->
+    <footer>
+      <p>
+        This advice is for informational purposes only and does not replace
+        professional tax or legal advisory.
+        <!-- Consult with a qualified tax professional for personalized advice. -->
+      </p>
+    </footer>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script>
+import Logo from "./components/Logo.vue";
+import Questions from "./components/Questions.vue";
+import Results from "./components/Results.vue";
+
+export default {
+  components: {
+    Logo,
+    Questions,
+    Results,
+  },
+  data() {
+    return {
+      recordedAnswers: [], // Array to store answers
+      questionsSubmitted: false, // Flag to check if questions are submitted
+    };
+  },
+  methods: {
+    receiveAnswers(answers) {
+      // Receive all answers from the Questions component
+      this.recordedAnswers = answers;
+      this.questionsSubmitted = true;
+      console.log("Answers", this.recordedAnswers);
+    },
+  },
+};
+</script>
+
+<style>
+#app {
+  width: 99%;
+  min-height: 100vh; /* Ensure the container takes at least the full height of the viewport */
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: flex-start; /* Align items to the start (top) of the container */
+  justify-content: flex-start; /* Align content to the start (top) of the container */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+footer {
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%;
+  padding: 10px;
+  /* background-color: #f0f0f0; */
+  border-top: 1px solid #ccc;
+  margin-top: 20vh; /* 10% of the viewport height */
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+footer p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
 }
 </style>
