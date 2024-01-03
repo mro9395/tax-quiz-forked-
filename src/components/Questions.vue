@@ -1,6 +1,17 @@
 <template>
   <div>
     <div v-if="!questionsSubmitted">
+      <div class="intro">
+        <h2>Learn if you are eligible for tax credits or deductions</h2>
+        <p>
+          In America, income is earned through various sources such as
+          employment and investments. Taxes are imposed at federal, state, and
+          local levels, including income, payroll, and sales taxes. Deductions,
+          like loan interest and charitable contributions, can reduce taxable
+          income. Understanding these components is crucial for individuals and
+          businesses to navigate the complex U.S. tax system efficiently.
+        </p>
+      </div>
       <h2>{{ question }}</h2>
       <div>
         <button @click="answerQuestion(true)">Yes</button>
@@ -51,7 +62,8 @@ export default {
         this.currentQuestionIndex++;
       } else {
         this.questionsSubmitted = true;
-        alert("Thanks for answering all the questions!");
+        this.$emit("answersSubmitted", this.answers);
+        // alert("Thanks for answering all the questions!");
         // alert(this.answers);
         console.log("Answers:", this.answers);
         // You can now process the answers as needed.
@@ -78,5 +90,11 @@ button {
 
 div {
   display: block;
+  /* background-color: #f1f4f8; */
+}
+
+.intro {
+  text-align: left;
+  padding: 10px;
 }
 </style>
