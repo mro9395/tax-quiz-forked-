@@ -11,6 +11,7 @@
         professional tax or legal advisory.
         <!-- Consult with a qualified tax professional for personalized advice. -->
       </p>
+      <p>&copy; 2024 Last Minute Taxes. All rights reserved.</p>
     </footer>
   </div>
 </template>
