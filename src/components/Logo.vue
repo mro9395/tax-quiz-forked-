@@ -2,9 +2,7 @@
 <template>
   <div class="logo">
     <div class="name-and-link">
-      <div class="company-name">
-        <a href="/" style="color: white">LastMinuteTaxes</a>
-      </div>
+      <div class="company-name" href="/">LastMinuteTaxes</div>
       <a
         class="pricing-link"
         href="https://calendly.com/mauio/shortcall"
@@ -41,7 +39,13 @@ falta de boton atras */
   font-size: 20px;
   padding: 10px;
   font-weight: bold;
-  font-family: Roboto, Monserrat, Lato, Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    Open Sans,
+    Lato,
+    Avenir,
+    Helvetica,
+    Arial,
+    sans-serif;
   color: white;
 }
 
