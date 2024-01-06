@@ -3,12 +3,15 @@
   <div class="logo">
     <div class="name-and-link">
       <div class="company-name" href="/">LastMinuteTaxes</div>
-      <a
-        class="pricing-link"
-        href="https://calendly.com/mauio/shortcall"
-        target="_blank"
-        >PRICING</a
-      >
+      <!-- <router-link to="/home" class="company-name">LastMinuteTaxes</router-link> -->
+      <!-- <router-link to="/pricing" class="pricing-link">PRICING</router-link>
+      <router-view /> -->
+      <div class="pricing-link">
+        <a class="alink" href="/Pricing.html"> PRICING </a>
+        <a class="alink" href="https://calendly.com/mauio/shortcall">
+          CONTACT US
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -50,9 +53,15 @@ falta de boton atras */
 }
 
 .pricing-link {
+  /* display: flex; */
+  justify-content: space-between;
   text-decoration: none;
   color: white;
-  padding: 10px;
+  padding: 0px;
   font-size: 16px;
+}
+.alink {
+  color: white;
+  padding: 10px;
 }
 </style>

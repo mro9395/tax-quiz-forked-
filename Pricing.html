@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Your styling for the pricing page */
+      .pricing-box {
+        width: 200px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        padding: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .pricing-box h3 {
+        margin-bottom: 10px;
+      }
+
+      .free-tier {
+        background-color: #b3e0ff;
+      }
+
+      .paid-tier {
+        background-color: #ffcccb;
+      }
+
+      /* Apply a transformation when the box is hovered */
+      .pricing-box.hovered {
+        transform: translateY(-10px);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pricing Page</h2>
+
+    <!-- Free Tier Box -->
+    <div
+      class="pricing-box free-tier"
+      onmouseover="moveBox(this)"
+      onmouseout="resetBox(this)"
+    >
+      <h3>Free Tier</h3>
+      <p>Explore basic features for free.</p>
+    </div>
+
+    <!-- Paid Tier Box -->
+    <div
+      class="pricing-box paid-tier"
+      onmouseover="moveBox(this)"
+      onmouseout="resetBox(this)"
+    >
+      <h3>Paid Tier ($20)</h3>
+      <p>Unlock premium features for $20/month.</p>
+    </div>
+
+    <script>
+      function moveBox(element) {
+        // Move the box by adding a CSS class
+        element.classList.add("hovered");
+      }
+
+      function resetBox(element) {
+        // Reset the box position by removing the CSS class
+        element.classList.remove("hovered");
+      }
+    </script>
+  </body>
+</html>
