@@ -2,7 +2,7 @@
 <template>
   <div class="logo">
     <div class="name-and-link">
-      <div class="company-name" href="/">LastMinuteTaxes</div>
+      <div class="company-name"><a href="/">LastMinuteTaxes</a></div>
       <!-- <router-link to="/home" class="company-name">LastMinuteTaxes</router-link> -->
       <!-- <router-link to="/pricing" class="pricing-link">PRICING</router-link>
       <router-view /> -->
