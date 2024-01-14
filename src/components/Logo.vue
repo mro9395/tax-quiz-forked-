@@ -3,7 +3,9 @@
   <div class="logo">
     <div class="name-and-link">
       <div class="company-name">
-        <a class="alink" href="/">LastMinuteTaxes</a>
+        <router-link to="/" class="company-name">LastMinuteTaxes</router-link>
+
+        <!-- <a class="alink" href="/">LastMinuteTaxes</a> -->
       </div>
       <!-- <router-link to="/home" class="company-name">LastMinuteTaxes</router-link> -->
       <div class="pricing-link">
