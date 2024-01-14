@@ -5,6 +5,8 @@
     <Questions @answersSubmitted="receiveAnswers" />
     <!-- <Results :answers="answers" /> -->
     <Results v-if="questionsSubmitted" :answers="answers" />
+    <!-- <router-link to="/privacy">Privacy Policy</router-link> -->
+
     <footer>
       <p>
         This advice is for informational purposes only and does not replace
@@ -12,6 +14,7 @@
         <!-- Consult with a qualified tax professional for personalized advice. -->
       </p>
       <p>&copy; 2024 Last Minute Taxes. All rights reserved.</p>
+      <router-link to="/privacy">Privacy Policy</router-link>
     </footer>
   </div>
 </template>
