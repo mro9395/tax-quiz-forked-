@@ -6,10 +6,8 @@
         <a class="alink" href="/">LastMinuteTaxes</a>
       </div>
       <!-- <router-link to="/home" class="company-name">LastMinuteTaxes</router-link> -->
-      <!-- <router-link to="/pricing" class="pricing-link">PRICING</router-link>
-      <router-view /> -->
       <div class="pricing-link">
-        <a class="alink" href="/Pricing.html"> PRICING </a>
+        <router-link to="/pricing" class="pricing-link">PRICING</router-link>
         <a class="alink" href="https://calendly.com/mauio/shortcall">
           CONTACT US
         </a>

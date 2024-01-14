@@ -1,11 +1,13 @@
 <!-- App.vue -->
 <template>
   <div id="app">
-    <Logo />
-    <Questions @answersSubmitted="receiveAnswers" />
-    <!-- <Results :answers="answers" /> -->
-    <Results v-if="questionsSubmitted" :answers="answers" />
+    <header>
+      <Logo />
+    </header>
+    <!-- <Questions @answersSubmitted="receiveAnswers" /> -->
+    <!-- <Results v-if="questionsSubmitted" :answers="answers" /> -->
     <!-- <router-link to="/privacy">Privacy Policy</router-link> -->
+    <RouterView />
 
     <footer>
       <p>
@@ -13,7 +15,7 @@
         professional tax or legal advisory.
         <!-- Consult with a qualified tax professional for personalized advice. -->
       </p>
-      <p>&copy; 2024 Last Minute Taxes. All rights reserved.</p>
+      <p>&copy; 2024 LastMinuteTaxes. All rights reserved.</p>
       <router-link to="/privacy">Privacy Policy</router-link>
     </footer>
   </div>
