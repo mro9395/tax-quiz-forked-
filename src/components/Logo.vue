@@ -3,6 +3,13 @@
   <div class="logo">
     <div class="name-and-link">
       <div class="company-name">
+        <img
+          src="\src\assets\LMT_logo2.png"
+          alt="Icon description"
+          style="width: 20px; height: 20px"
+        />
+        <!-- Replace "path/to/your/icon.png" with the actual path to your image -->
+
         <router-link to="/" class="company-name">LastMinuteTaxes</router-link>
 
         <!-- <a class="alink" href="/">LastMinuteTaxes</a> -->

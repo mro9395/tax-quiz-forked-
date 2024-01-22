@@ -11,6 +11,11 @@
           income. Understanding these components is crucial for individuals and
           businesses to navigate the complex U.S. tax system efficiently.
         </p>
+        <!-- <br /> -->
+        <p>
+          Answer the following questions and learn if you are eligible for tax
+          deductions or credits.
+        </p>
       </div>
       <h2>{{ question }}</h2>
       <div>

@@ -12,62 +12,58 @@
     </div>
     <div class="boxes">
       <!-- Use v-if directive to conditionally render each box -->
-      <div
-        v-if="answers[0].response"
-        class="box"
+      <a
         href="https://www.nerdwallet.com/article/loans/student-loans/education-tax-credits"
       >
-        Lifetime Learning Credit<br />
-        <p class="value">~$ 2,000</p>
-      </div>
-      <div
-        v-if="answers[1].response"
-        class="box"
+        <div v-if="answers[0].response" class="box">
+          Lifetime Learning Credit
+          <br />
+          <p class="value">~$ 2,000</p>
+        </div></a
+      >
+      <a
         href="https://www.nerdwallet.com/article/taxes/qualify-child-child-care-tax-credit"
       >
-        Child Tax Credit<br />
-        <p class="value">~$ 2,000 per child</p>
-      </div>
-      <div
-        v-if="answers[2].response"
-        class="box"
+        <div v-if="answers[1].response" class="box">
+          Child Tax Credit<br />
+          <p class="value">~$ 2,000 per child</p>
+        </div></a
+      >
+      <a
         href="https://www.nerdwallet.com/article/loans/student-loans/8-student-faqs-taxes/"
       >
-        Student Loan Interest Deduction <br />
-        <p class="value">~$ 2,500</p>
-      </div>
-      <div
-        v-if="answers[3].response"
-        class="box"
+        <div v-if="answers[2].response" class="box">
+          Student Loan Interest Deduction <br />
+          <p class="value">~$ 2,500</p>
+        </div></a
+      >
+      <a
         href="https://www.nerdwallet.com/blog/taxes/how-does-medical-expenses-tax-deduction-work/"
+        ><div v-if="answers[3].response" class="box">
+          <div>Medical Expenses Deduction</div>
+          <div class="value">Varies</div>
+        </div></a
       >
-        <div>Medical Expenses Deduction</div>
-        <div class="value">Varies</div>
-      </div>
-      <div
-        v-if="answers[4].response"
-        class="box"
-        href="https://www.nerdwallet.com/article/ira-contribution-limits"
+      <a href="https://www.nerdwallet.com/article/ira-contribution-limits"
+        ><div v-if="answers[4].response" class="box">
+          IRA, 401(k) or 403(b) Deductions<br />
+          <p class="value">From $6,500 to $22,500</p>
+        </div></a
       >
-        IRA, 401(k) or 403(b) Deductions<br />
-        <p class="value">From $6,500 to $22,500</p>
-      </div>
-      <div
-        v-if="answers[5].response"
-        class="box"
+      <a
         href="https://www.nerdwallet.com/blog/taxes/get-charitable-contribution-tax-deduction-3-steps/"
+        ><div v-if="answers[5].response" class="box">
+          Charitable Donation Deduction<br />
+          <p class="value">Varies</p>
+        </div></a
       >
-        Charitable Donation Deduction<br />
-        <p class="value">Varies</p>
-      </div>
-      <div
-        v-if="answers[6].response"
-        class="box"
+      <a
         href="https://www.nerdwallet.com/article/taxes/ev-tax-credit-electric-vehicle-tax-credit/"
+        ><div v-if="answers[6].response" class="box">
+          Electric Vehicle Tax Credit<br />
+          <p class="value">~$ 7,500</p>
+        </div></a
       >
-        Electric Vehicle Tax Credit<br />
-        <p class="value">~$ 7,500</p>
-      </div>
     </div>
     <p style="text-align: left; font-size: 10px; padding: 5px">
       *The amount varies depending on specific situations like number of

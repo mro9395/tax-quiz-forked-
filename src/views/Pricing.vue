@@ -1,6 +1,6 @@
 <!-- Pricing.vue -->
 <template>
-  <h1>Find a plan to power your financial goals</h1>
+  <h2>Find a plan to power your financial goals</h2>
   <div class="pricing-container">
     <div class="pricing-tier" @mouseover="startBounce" @mouseout="stopBounce">
       <h2>Free Tier</h2>
